@@ -1,0 +1,24 @@
+{
+  "type": "panel",
+  "name": "Scatter Plot",
+  "id": "grafana-scatterplot-panel",
+
+  "info": {
+    "description": "Scatter plot panel for grafana",
+    "author": {
+      "name": "B Sravan Kumar",
+      "url": "http://grafana.com"
+    },
+    "keywords": ["scatterplot", "panel"],
+    "links": [
+      {"name": "Project site", "url": "https://github.com/gopikrishnayogeshwar/Hello_World"}
+    ],
+    "version": "1.2.0",
+    "updated": "2018-01-07"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "4.6",
+    "plugins": [ ]
+  }
+}

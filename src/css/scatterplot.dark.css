@@ -1,0 +1,273 @@
+
+.scatterplot-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.scatterplot-panel--legend-right {
+  flex-direction: row;
+}
+
+.scatterplot-panel--legend-right .scatterplot-legend {
+  flex: 0 1 10px;
+  max-height: 100%;
+}
+
+.scatterplot-panel--legend-right .scatterplot-legend-series {
+  display: block;
+  padding-left: 0px;
+}
+
+.scatterplot-panel--legend-right .scatterplot-legend-table .scatterplot-legend-series {
+  display: table-row;
+}
+
+.scatterplot-panel__chart {
+  position: relative;
+  cursor: crosshair;
+  flex-grow: 1;
+}
+
+.datapoints-warning {
+  pointer: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  margin-top: -50px;
+  margin-left: -100px;
+  width: 200px;
+  text-align: center;
+  cursor: auto;
+  padding: 10px;
+}
+
+.scatterplot-legend {
+  flex: 0 1 auto;
+  max-height: 30%;
+  margin: 0 1rem;
+  text-align: center;
+  padding-top: 6px;
+  position: relative;
+}
+
+.scatterplot-legend .popover-content {
+  padding: 0;
+}
+
+.scatterplot-legend-icon {
+  position: relative;
+  padding-right: 4px;
+  top: 1px;
+}
+
+.scatterplot-legend-icon,
+.scatterplot-legend-alias,
+.scatterplot-legend-value {
+  cursor: pointer;
+  float: left;
+  white-space: nowrap;
+  font-size: 85%;
+  text-align: left;
+}
+
+.scatterplot-legend-icon.current::before {
+  content: "Current: ";
+}
+
+.scatterplot-legend-icon.max::before {
+  content: "Max: ";
+}
+
+.scatterplot-legend-icon.min::before {
+  content: "Min: ";
+}
+
+.scatterplot-legend-icon.total::before {
+  content: "Total: ";
+}
+
+.scatterplot-legend-icon.avg::before {
+  content: "Avg: ";
+}
+
+.scatterplot-legend-alias.current::before {
+  content: "Current: ";
+}
+
+.scatterplot-legend-alias.max::before {
+  content: "Max: ";
+}
+
+.scatterplot-legend-alias.min::before {
+  content: "Min: ";
+}
+
+.scatterplot-legend-alias.total::before {
+  content: "Total: ";
+}
+
+.scatterplot-legend-alias.avg::before {
+  content: "Avg: ";
+}
+
+.scatterplot-legend-value.current::before {
+  content: "Current: ";
+}
+
+.scatterplot-legend-value.max::before {
+  content: "Max: ";
+}
+
+.scatterplot-legend-value.min::before {
+  content: "Min: ";
+}
+
+.scatterplot-legend-value.total::before {
+  content: "Total: ";
+}
+
+.scatterplot-legend-value.avg::before {
+  content: "Avg: ";
+}
+
+.scatterplot-legend-icon .fa {
+  font-size: 135%;
+  position: relative;
+  top: 1px;
+}
+
+.scatterplot-legend-series {
+  float: left;
+  white-space: nowrap;
+  padding-left: 10px;
+}
+
+.scatterplot-legend-series--right-y {
+  float: right;
+}
+
+.scatterplot-legend-value {
+  padding-left: 6px;
+}
+
+.scatterplot-legend-table tbody {
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  padding-bottom: 1px;
+  padding-right: 5px;
+}
+
+.scatterplot-legend-table .scatterplot-legend-series {
+  display: table-row;
+  float: none;
+  padding-left: 0;
+}
+
+.scatterplot-legend-table .scatterplot-legend-series--right-y {
+  float: none;
+}
+
+.scatterplot-legend-table .scatterplot-legend-series--right-y .scatterplot-legend-alias::after {
+  content: "(right-y)";
+  padding: 0 5px;
+  color: #8e8e8e;
+}
+
+.scatterplot-legend-table td,
+.scatterplot-legend-alias,
+.scatterplot-legend-icon,
+.scatterplot-legend-value {
+  float: none;
+  display: table-cell;
+  white-space: nowrap;
+  padding: 2px 10px;
+  text-align: right;
+}
+
+.scatterplot-legend-table .scatterplot-legend-icon {
+  width: 5px;
+  padding: 0;
+  top: 0;
+}
+
+.scatterplot-legend-table .scatterplot-legend-icon .fa {
+  top: 4px;
+}
+
+.scatterplot-legend-table .scatterplot-legend-value {
+  padding-left: 15px;
+}
+
+.scatterplot-legend-table .scatterplot-legend-alias {
+  padding-left: 7px;
+  text-align: left;
+  width: 95%;
+  max-width: 650px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.scatterplot-legend-table .scatterplot-legend-series:nth-child(odd) {
+  background: #262628;
+}
+
+.scatterplot-legend-table .scatterplot-legend-value.current::before {
+  content: "";
+}
+
+.scatterplot-legend-table .scatterplot-legend-value.max::before {
+  content: "";
+}
+
+.scatterplot-legend-table .scatterplot-legend-value.min::before {
+  content: "";
+}
+
+.scatterplot-legend-table .scatterplot-legend-value.total::before {
+  content: "";
+}
+
+.scatterplot-legend-table .scatterplot-legend-value.avg::before {
+  content: "";
+}
+
+.scatterplot-legend-table th {
+  text-align: right;
+  padding: 0px 10px 1px 0;
+  font-weight: bold;
+  color: #33b5e5;
+  font-size: 85%;
+  white-space: nowrap;
+}
+
+.scatterplot-legend-series-hidden .scatterplot-legend-value,
+.scatterplot-legend-alias {
+  color: darken(darken(#fff, 11%), 30%);
+}
+
+.scatterplot-tooltip {
+  white-space: nowrap;
+  font-size:12px;
+  background-color: #141414;
+  color: #d8d9da;
+}
+
+.scatterplot-tooltip .scatterplot-tooltip-time {
+  text-align: center;
+  position: relative;
+  top: -3px;
+  padding: 0.2rem;
+  font-weight: bold;
+  color: #d8d9da;
+}
+
+.scatterplot-tooltip .scatterplot-tooltip-value {
+  display: table-cell;
+  font-weight: bold;
+  padding-left: 15px;
+  text-align: right;
+}

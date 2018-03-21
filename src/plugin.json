@@ -6,7 +6,7 @@
   "info": {
     "description": "Scatter plot panel for grafana",
     "author": {
-      "name": "B Sravan Kumar",
+      "name": "G Gopi",
       "url": "http://grafana.com"
     },
     "keywords": ["scatterplot", "panel"],

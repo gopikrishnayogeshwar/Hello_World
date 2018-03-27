@@ -7,10 +7,10 @@ import PerfectScrollbar from "./lib/perfect-scrollbar.min";
 
 angular
   .module("grafana.directives")
-  .directive("scatterchartLegend", function(popoverSrv, $timeout) {
+  .directive("scatterplotLegend", function(popoverSrv, $timeout) {
     return {
       link: function(scope, elem) {
-        var $container = $('<section class="scatterchart-legend"></section>');
+        var $container = $('<section class="scatterplot-legend"></section>');
         var firstRender = true;
         var ctrl = scope.ctrl;
         var panel = ctrl.panel;
@@ -135,16 +135,16 @@ angular
         function render() {
           if (panel.legendType === "On graph") {
             $container.empty();
-            $(".scatterchart-legend").css("padding-top", 0);
+            $(".scatterplot-legend").css("padding-top", 0);
             return;
           } else {
-            $(".scatterchart-legend").css("padding-top", 6);
+            $(".scatterplot-legend").css("padding-top", 6);
           }
 
           if (firstRender) {
             elem.append($container);
-            $container.on("click", ".scatterchart-legend-icon", openColorSelector);
-            $container.on("click", ".scatterchart-legend-alias", toggleSeries);
+            $container.on("click", ".scatterplot-legend-icon", openColorSelector);
+            $container.on("click", ".scatterplot-legend-alias", toggleSeries);
             $container.on("click", "th", sortLegend);
             firstRender = false;
           }
@@ -165,7 +165,7 @@ angular
               panel.legendType === "Right side") &&
             showValues;
 
-          $container.toggleClass("scatterchart-legend-table", tableLayout);
+          $container.toggleClass("scatterplot-legend-table", tableLayout);
 
           var legendHeader;
           if (tableLayout) {
@@ -217,12 +217,12 @@ angular
               decimal = ctrl.panel.legend.percentageDecimals;
             }
 
-            var html = '<div class="scatterchart-legend-series';
+            var html = '<div class="scatterplot-legend-series';
             if (ctrl.hiddenSeries[series.alias]) {
-              html += " scatterchart-legend-series-hidden";
+              html += " scatterplot-legend-series-hidden";
             }
             html += '" data-series-index="' + i + '">';
-            html += '<span class="scatterchart-legend-icon" style="float:none;">';
+            html += '<span class="scatterplot-legend-icon" style="float:none;">';
             html +=
               '<i class="fa fa-minus pointer" style="color:' +
               seriesData.color +
@@ -230,7 +230,7 @@ angular
             html += "</span>";
 
             html +=
-              '<a class="scatterchart-legend-alias" style="float:none;">' +
+              '<a class="scatterplot-legend-alias" style="float:none;">' +
               seriesData.label +
               "</a>";
 
@@ -238,13 +238,13 @@ angular
               var value = series.stats[ctrl.panel.valueName];
               if (panel.legend.values) {
                 html +=
-                  '<div class="scatterchart-legend-value">' +
+                  '<div class="scatterplot-legend-value">' +
                   ctrl.formatValue(value) +
                   "</div>";
               }
               if (total) {
                 var pvalue = (value / total * 100).toFixed(decimal) + "%";
-                html += '<div class="scatterchart-legend-value">' + pvalue + "</div>";
+                html += '<div class="scatterplot-legend-value">' + pvalue + "</div>";
               }
             }
 
@@ -280,7 +280,7 @@ angular
 
           if (!legendScrollbar) {
             legendScrollbar = new PerfectScrollbar(
-              ".scatterchart-legend",
+              ".scatterplot-legend",
               scrollbarOptions
             );
           } else {

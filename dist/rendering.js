@@ -67,7 +67,7 @@ System.register(['lodash', 'jquery', 'jquery.flot', 'jquery.flot.pie'], function
       elem.html(html);
     }
 
-    function addscatterplot() {
+    function addScatterPlot() {
       var width = elem.width();
       var height = elem.height();
 
@@ -177,7 +177,7 @@ System.register(['lodash', 'jquery', 'jquery.flot', 'jquery.flot.pie'], function
         if (0 == ctrl.data.length) {
           noDataPoints();
         } else {
-          addscatterplot();
+          addScatterPlot();
         }
       }
       if (incrementRenderCounter) {

@@ -11,7 +11,7 @@
     },
     "keywords": ["scatterplot", "panel"],
     "links": [
-      {"name": "Project site", "url": "https://github.com/grafana/scatterplot-panel"},//Change Here
+      {"name": "Project site", "url": "https://github.com/gopikrishnayogeshwar/Hello_World"},//Change Here
     ],
     "version": "1.2.0",
     "updated": "2018-01-07"

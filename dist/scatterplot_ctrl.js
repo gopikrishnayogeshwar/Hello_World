@@ -118,7 +118,7 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', 'app/core/ti
         _createClass(ScatterPlotCtrl, [{
           key: 'onInitEditMode',
           value: function onInitEditMode() {
-            this.addEditorTab('Options', 'public/plugins/grafana-ScatterPlot-panel/editor.html', 2);
+            this.addEditorTab('Options', 'public/plugins/grafana-scatterplot-panel/editor.html', 2);
             this.unitFormats = kbn.getUnitFormats();
           }
         }, {

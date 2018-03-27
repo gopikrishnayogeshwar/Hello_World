@@ -48,7 +48,7 @@ export class PieChartCtrl extends MetricsPanelCtrl {
   }
 
   onInitEditMode() {
-    this.addEditorTab('Options', 'public/plugins/grafana-piechart-panel/editor.html', 2);
+    this.addEditorTab('Options', 'public/plugins/grafana-scatterplot-panel/editor.html', 2);
     this.unitFormats = kbn.getUnitFormats();
   }
 
@@ -160,4 +160,4 @@ export class PieChartCtrl extends MetricsPanelCtrl {
   }
 }
 
-PieChartCtrl.templateUrl = 'module.html';
+ScatterPlotCtrl.templateUrl = 'module.html';

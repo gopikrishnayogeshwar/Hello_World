@@ -5,7 +5,7 @@ import TimeSeries from 'app/core/time_series';
 import rendering from './rendering';
 import legend from './legend';
 
-export class PieChartCtrl extends MetricsPanelCtrl {
+export class ScatterPlotCtrl extends MetricsPanelCtrl {
 
   constructor($scope, $injector, $rootScope) {
     super($scope, $injector);
@@ -13,7 +13,7 @@ export class PieChartCtrl extends MetricsPanelCtrl {
     this.hiddenSeries = {};
 
     var panelDefaults = {
-      pieType: 'pie',
+      scatterType: 'scatter',
       legend: {
         show: true, // disable/enable legend
         values: true

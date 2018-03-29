@@ -115,9 +115,9 @@ System.register(['lodash', 'jquery', 'jquery.flot', 'jquery.flot.pie'], function
         }
       };
 
-      if (panel.pieType === 'donut') {
+      /*if (panel.pieType === 'donut') {
         options.series.pie.innerRadius = 0.5;
-      }
+      }*/
 
       data = ctrl.data;
 

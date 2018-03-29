@@ -109,11 +109,11 @@ export default function link(scope, elem, attrs, ctrl) {
         clickable: false
       }
     };
-
+/*
     if (panel.pieType === 'donut') {
       options.series.pie.innerRadius = 0.5;
     }
-
+*/
     data = ctrl.data;
 
     for (let i = 0; i < data.length; i++) {

@@ -13,8 +13,8 @@ System.register(['./scatterplot_ctrl', 'app/plugins/sdk'], function (_export, _c
     execute: function () {
 
       loadPluginCss({
-        dark: 'plugins/grafana-scatterplot-panel/css/scatterplot.dark.css',
-        light: 'plugins/grafana-scatterplot-panel/css/scatterplot.light.css'
+        dark: 'plugins/grafana-Hello_World/css/scatterplot.dark.css',
+        light: 'plugins/grafana-Hello_World/css/scatterplot.light.css'
       });
 
       _export('PanelCtrl', ScatterPlotCtrl);

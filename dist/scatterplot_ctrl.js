@@ -80,7 +80,7 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', 'app/core/ti
           _this.hiddenSeries = {};
 
           var panelDefaults = {
-            pieType: 'pie',
+            Type: 'scatter',
             legend: {
               show: true, // disable/enable legend
               values: true

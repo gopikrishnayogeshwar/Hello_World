@@ -85,7 +85,7 @@ export default function link(scope, elem, attrs, ctrl) {
         show: false
       },
       series: {
-        pie: {
+        scatter: {
           show: true,
           stroke: {
             color: backgroundColor,

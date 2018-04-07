@@ -90,22 +90,17 @@ System.register(['lodash', 'jquery', 'jquery.flot', 'jquery.flot.pie'], function
           show: false
         },
         series: {
-          pie: {
+          points: {
+            radious: 3,
             show: true,
-            stroke: {
-              color: backgroundColor,
-              width: parseFloat(ctrl.panel.strokeWidth).toFixed(1)
-            },
+            fill: true,
+            fillColor: "#058DC7",
             label: {
               show: ctrl.panel.legend.show && ctrl.panel.legendType === 'On graph',
               formatter: formatter
             },
             highlight: {
               opacity: 0.0
-            },
-            combine: {
-              threshold: ctrl.panel.combine.threshold,
-              label: ctrl.panel.combine.label
             }
           }
         },
@@ -115,9 +110,6 @@ System.register(['lodash', 'jquery', 'jquery.flot', 'jquery.flot.pie'], function
         }
       };
 
-      /*if (panel.pieType === 'donut') {
-        options.series.pie.innerRadius = 0.5;
-      }*/
 
       data = ctrl.data;
 
